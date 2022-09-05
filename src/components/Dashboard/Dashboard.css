@@ -1,0 +1,89 @@
+.add_button {
+    position: absolute;
+    /* margin: auto; */
+    /* width: 140px;
+    height: 35px; */
+    left: 250px;
+    top: 84px;
+    padding: 8px 17px 13px;
+    background: #2DC08D;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.add_button:hover {
+    background-color: #23976f;
+}
+
+
+.page {
+    margin-bottom: 50px;
+    position: absolute;
+    width: 940px;
+    height: 1329.85px;
+    left: 250px;
+    top: 143px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .page {
+    display: block;
+    width: 940px;
+    height: 1329.85px;
+    margin: 2cm auto;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.experience_wrapper {
+    margin-top: 32px;
+    margin-left: 48px;
+}
+
+.experience_header {
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    color: #2D3639;
+    border-bottom: 3px solid #2D3639;
+    width: 450px;
+
+}
+
+.title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+    border: none;
+    outline: none;
+}
+
+/* .title:empty:not(:focus):before {
+    content: attr(data-placeholder);
+} */
+
+.company_name {
+    font-family: 'Rubik', sans-serif;
+    color: #3F9CDC;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.date_city {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.date_city>span {
+    margin-right: 10px;
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    margin-top: 4px;
+}
