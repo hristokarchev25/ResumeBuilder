@@ -8,7 +8,13 @@ export default function Dashboard() {
 
     const handleExperienceAdd = () => {
         setExperienceList([...experienceList, { experience: "" }])
-    }
+    };
+
+    const handleExperienceRemove = (index) => {
+        const list = [...experienceList];
+        list.splice(index, 1);
+        setExperienceList(list);
+    };
 
     return (
         <>
@@ -19,11 +25,20 @@ export default function Dashboard() {
 
                 {experienceList.map((singleExperience, index) => (
                     <div key={index} class="experience_wrapper">
-                        <div class="experience_header">Experience</div>
-                        <div class="title" contenteditable="true" data-placeholder="Title">Title</div>
-                        <div class="company_name">Company Name</div>
-                        <div class="date_city"><span>Date period</span> <span>New York, NY</span></div>
-                        <div class="description">Company Description</div>
+
+                        <div class="experience_header">
+                            Experience
+                            {experienceList.length > 1 && (
+                                <span onClick={() => handleExperienceRemove(index)}>X</span>
+                            )}
+                        </div>
+                        <div class="title" contenteditable="true" data-text="Title"></div>
+                        <div class="company_name" contenteditable="true" data-text="Company Name"></div>
+                        <div class="date_city">
+                            <span className="spanOne" contenteditable="true" data-text="Date period"></span>
+                            <span className='spanTwo' contenteditable="true" data-text="New York, NY"></span>
+                        </div>
+                        <div class="description" contenteditable="true" data-text="Company Description"></div>
                     </div>
                 ))}
 

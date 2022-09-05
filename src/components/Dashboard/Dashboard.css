@@ -50,7 +50,13 @@
     color: #2D3639;
     border-bottom: 3px solid #2D3639;
     width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.experience_header > span:hover {
+    cursor: pointer;
+    color: red;
 }
 
 .title {
@@ -58,19 +64,23 @@
     font-size: 22px;
     margin-top: 15px;
     margin-bottom: 4px;
-    border: none;
     outline: none;
 }
 
-/* .title:empty:not(:focus):before {
-    content: attr(data-placeholder);
-} */
+.title:empty:not(:focus):before {
+    content: attr(data-text);
+}
 
 .company_name {
     font-family: 'Rubik', sans-serif;
     color: #3F9CDC;
     font-size: 16px;
     margin-bottom: 4px;
+    outline: none;
+}
+
+.company_name:empty:not(:focus):before {
+    content: attr(data-text);
 }
 
 .date_city {
@@ -80,10 +90,28 @@
 
 .date_city>span {
     margin-right: 10px;
+    outline: none;
+}
+
+/* .date_city>span:empty:not(:focus):before {
+    content: attr(data-text);
+} */
+
+.spanOne:empty:not(:focus):before {
+    content: attr(data-text);
+}
+
+.spanTwo:empty:not(:focus):before {
+    content: attr(data-text);
 }
 
 .description {
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     margin-top: 4px;
+    outline: none;
+}
+
+.description:empty:not(:focus):before {
+    content: attr(data-text);
 }
