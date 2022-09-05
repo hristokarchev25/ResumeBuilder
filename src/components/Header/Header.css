@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #FFFFFF;
     top: 0;
-    z-index: 100
+    z-index: 100;
 }
 
 .header_navigation {
@@ -13,14 +13,15 @@
     margin-left: 32px;
 }
 
-.header_navigation > span {
+.header_navigation > a > span {
     font-family: 'Inter', sans-serif;
     color: #232528;
     font-size: 14px;
     margin-right: 30px;
+    text-decoration: none;
 }
 
-.header_navigation > span:hover {
+.header_navigation > a > span:hover {
     cursor: pointer;
     color: #8c7cdb;
 }
