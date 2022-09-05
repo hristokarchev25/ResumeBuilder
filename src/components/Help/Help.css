@@ -1,0 +1,19 @@
+.help_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.help_info > h1 {
+    font-size: 65px;
+    letter-spacing: 1.4px;
+    margin: 50px;
+    color: #384347;
+    text-align: center;
+  }
+  .help_info > p {
+    color: #384347;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin: 30px;
+  }
