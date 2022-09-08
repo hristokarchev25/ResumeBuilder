@@ -161,3 +161,18 @@
     border: 1px solid #BDBDBD;
     border-radius: 3px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .add_button {
+        left: 150px;
+    }
+
+    .page {
+        width: 100%;
+        left: 0;
+    }
+
+    .experience_header {
+        width: 85%;
+    }
+  }
