@@ -23,16 +23,13 @@ export default function Dashboard() {
 
     const descriptionHandler = (e) => {
         e.preventDefault();
-        console.log(description.substr(0, 20));
-        //let result = description.substr(0, 20);
 
-        if (description.includes("many") || description.includes("a lot")) {
+        if (description.toLowerCase().includes("many") || description.toLowerCase().includes("a lot")) {
             document.getElementById("bubble").style.visibility = "visible";
             document.getElementById("description_input").style.background = "rgba(235, 87, 87, 0.66)";
-            ///result.style.background = "rgba(235, 87, 87, 0.66)";
         } else {
             document.getElementById("bubble").style.visibility = "hidden";
-            document.getElementById("description_input").style.background = "#FFFFFF"
+            document.getElementById("description_input").style.background = "#FFFFFF";
         }
     }
 
@@ -46,13 +43,13 @@ export default function Dashboard() {
 
     const checkHandler = () => {
         document.getElementById("bubble").style.display = "none";
+        document.getElementById("description_input").style.background = "none";
     }
 
 
     return (
         <>
             {experienceList.length < 7 && (<div className="add_button" onClick={handleExperienceAdd}>Add New Entry</div>)}
-
 
             <div className="page">
 
@@ -66,15 +63,13 @@ export default function Dashboard() {
                                     <span onClick={() => handleExperienceRemove(index)}>X</span>
                                 )}
                             </div>
-                            <div className="title" contentEditable="true" data-text="Title"></div>
+                            <input className="title" type="text" placeholder='Title' />
                             <div className="company_name" contentEditable="true" data-text="Company Name"></div>
                             <div className="date_city">
-                                {/* <span className="spanOne" contentEditable="true" data-text="Date period"></span>
-                            <span className='spanTwo' contentEditable="true" data-text="New York, NY"></span> */}
-                                <input type="text" placeholder='Date period' />
+                                <span className="spanOne" contentEditable="true" data-text="Date period"></span>
                                 <input type="text" placeholder='New York, NY' />
                             </div>
-                            <div className="description" /* contentEditable="true" data-text="Company Description" value={description} onChange={(e) => { setDescription(e.target.value) }} */>
+                            <div className="description">
                                 <input id='description_input' placeholder='Company Description' value={description} onChange={(e) => { setDescription(e.target.value) }}
                                     onBlur={descriptionHandler}
                                     onMouseOver={descriptionHoverHandler}
