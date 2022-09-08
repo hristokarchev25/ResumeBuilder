@@ -4,7 +4,7 @@ import './Help.css';
 
 export default function Help() {
     return (
-        <div class="help_info">
+        <div className="help_info">
             <h1>Resume Builder</h1>
             <p>
                 Resume Builder is a simple app where users can add their

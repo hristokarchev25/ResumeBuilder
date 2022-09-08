@@ -1,8 +1,5 @@
 .add_button {
     position: absolute;
-    /* margin: auto; */
-    /* width: 140px;
-    height: 35px; */
     left: 250px;
     top: 84px;
     padding: 8px 17px 13px;
@@ -30,14 +27,6 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* .page {
-    display: block;
-    width: 940px;
-    height: 1329.85px;
-    margin: 2cm auto;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-} */
 
 .experience_wrapper {
     margin-top: 32px;
@@ -83,19 +72,18 @@
     content: attr(data-text);
 }
 
-.date_city {
+.date_city > input {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
-}
-
-.date_city>span {
-    margin-right: 10px;
+    border: none;
     outline: none;
 }
 
-/* .date_city>span:empty:not(:focus):before {
-    content: attr(data-text);
+/* .date_city>span {
+    margin-right: 10px;
+    outline: none;
 } */
+
 
 .spanOne:empty:not(:focus):before {
     content: attr(data-text);
@@ -105,13 +93,83 @@
     content: attr(data-text);
 }
 
-.description {
+.description > input{
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     margin-top: 4px;
     outline: none;
+    border: none;
 }
 
 .description:empty:not(:focus):before {
     content: attr(data-text);
 }
+
+
+.bubble_wrapper {
+    position: absolute;
+    width: 290px;
+    height: 171px;
+    left: 51px;
+    top: 177px;
+    visibility: hidden;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.2));
+}
+
+.bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0px;
+    position: absolute;
+    width: 290px;
+    height: 160px;
+    left: -3px;
+    top: 11px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+
+.bubble::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em;
+	border: .75rem solid transparent;
+	border-top: none;
+	border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.bubble_content {
+    margin: 12px 16px;
+    width: 90%
+}
+
+.bubble_header {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_logo_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_logo_wrapper > span {
+    margin-left: 8px;
+}
+
+.ignore_wrapper  > span {
+    margin-left: 10px;
+}
+
+.ignore_wrapper > input {
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+}
+
+.hidden { visibility: hidden; }
